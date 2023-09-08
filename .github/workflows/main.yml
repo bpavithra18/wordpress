@@ -18,7 +18,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           whoami
-          echo "${{ secrets.EC2_MANUAL }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.GCP_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa    
           ssh-keyscan 34.85.214.0 >> /home/runner/.ssh/known_hosts
           cat '/home/runner/.ssh/known_hosts'
